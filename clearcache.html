@@ -1,0 +1,102 @@
+<html>
+	<head>
+		<title>
+		</title>
+		<style>
+			div {
+				padding: 5px;
+				margin: 5px;
+			}
+			.checkBoxIn {
+				border: 2px solid #AAAAAA;
+				color: #292929;
+				accent-color: #8ab4f8;
+				margin-right: 10px;
+				transition: 0.3s;
+			}
+			.goButton {
+				align-self: flex-end;
+				margin: 5px;
+				padding: 5px;
+				background-color: #8ab4f8;
+				color: #292929;
+				border: 2px solid #8ab4f8;
+				border-radius: 5px;
+				font-family: "Sans", Helvetica, sans-serif;
+			}
+			.goButton:active {
+				background-color: #6892d6;
+				border: 2px solid #6892d6;
+			}
+			.checkBoxIn:hover, .goButton:hover {
+				background-color: #acd6fa;
+				border: 2px solid #acd6fa;
+			}
+			p {
+				margin: 5px;
+				padding: 5px;
+			}
+			.header {
+				font-size: 16;
+			}
+			hr {
+				width: 99%;
+				left: 0;
+				margin: 0;
+				margin-bottom: 5px;
+			}
+			@media (prefers-color-scheme: light) {
+				body {
+					color: #292929;
+					background-color: #FFFFFF;
+					font-family: "Segoe UI", Helvetica, sans-serif;
+					font-size: 14;
+					margin: 0;
+				}
+				.content {
+					width: 225px;
+					display: flex;
+					align-items: flex-start;
+					flex-direction: column;
+					border-radius: 5px;
+					background-color: #FFFFFF;
+				}
+			}
+			@media (prefers-color-scheme: dark) {
+				body {
+					color: white;
+					background-color: #292929;
+					font-family: "Segoe UI", Helvetica, sans-serif;
+					font-size: 14;
+					margin: 0;
+				}
+				.content {
+					width: 225px;
+					height: 207px;
+					display: flex;
+					align-items: flex-start;
+					flex-direction: column;
+					border-radius: 5px;
+					background-color: #292929;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="content" id="content">
+				<p class="header">Clear browsing data</p>
+				<hr />
+				<div class="indputD">
+					<input type="checkbox" class="checkBoxIn" id="hist" /><label class="cbLabel">Browsing history</label>
+				</div>
+				<div class="indputD">
+					<input type="checkbox" class="checkBoxIn" id="cookie" /><label class="cbLabel">Cookies and other site data</label>
+				</div>
+				<div class="indputD">
+					<input type="checkbox" class="checkBoxIn" id="cache" /><label class="cbLabel">Cached images and files</label>
+				</div>
+				<button class="goButton" id="goButton">Clear data</button>
+		</div>
+		<script src="clearcache.js"></script>
+	</body>
+</html>
